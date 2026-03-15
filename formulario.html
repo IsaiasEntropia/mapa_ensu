@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa ENSU | Formulario</title>
+    <meta name="description" content="Formulario institucional accesible para solicitud de información ENSU." />
+    <link rel="stylesheet" href="src/styles/tokens.css" />
+    <link rel="stylesheet" href="src/styles/base.css" />
+    <link rel="stylesheet" href="src/styles/components.css" />
+    <link rel="stylesheet" href="src/styles/pages.css" />
+  </head>
+  <body>
+    <a class="sisdai-skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+    <header id="site-header"></header>
+
+    <main id="contenido-principal" tabindex="-1" class="sisdai-shell sisdai-section">
+      <h1>Formulario de solicitud de reporte</h1>
+      <p class="sisdai-section__intro">Completa los campos para recibir un reporte personalizado de indicadores ENSU.</p>
+
+      <form class="sisdai-form" id="reporte-form" novalidate>
+        <div class="sisdai-form-group">
+          <label for="nombre">Nombre completo</label>
+          <input id="nombre" name="nombre" type="text" autocomplete="name" required />
+          <small id="nombre-ayuda">Tal como aparece en tu identificación institucional.</small>
+        </div>
+
+        <div class="sisdai-form-group">
+          <label for="correo">Correo electrónico</label>
+          <input id="correo" name="correo" type="email" autocomplete="email" required />
+        </div>
+
+        <fieldset class="sisdai-form-group">
+          <legend>Tipo de visualización solicitada</legend>
+          <div class="sisdai-inline-options">
+            <label><input type="checkbox" name="visualizaciones" value="mapa" /> Mapa</label>
+            <label><input type="checkbox" name="visualizaciones" value="coropleta" /> Coropleta</label>
+            <label><input type="checkbox" name="visualizaciones" value="grafica" /> Gráfica</label>
+          </div>
+        </fieldset>
+
+        <div class="sisdai-form-group">
+          <label for="prioridad">Prioridad</label>
+          <select id="prioridad" name="prioridad" required>
+            <option value="">Selecciona una opción</option>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+          </select>
+        </div>
+
+        <div class="sisdai-form-group">
+          <label for="comentarios">Comentarios</label>
+          <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+        </div>
+
+        <button class="sisdai-button" type="submit">Enviar solicitud</button>
+        <p id="form-status" class="sisdai-help-text" role="status" aria-live="polite"></p>
+      </form>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script type="module" src="src/formulario.js"></script>
+  </body>
+</html>
