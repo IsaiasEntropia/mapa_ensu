@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa ENSU | Inicio</title>
+    <meta
+      name="description"
+      content="Portal institucional con visualizaciones geoespaciales y estadísticas inspiradas en SISDAI."
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="src/styles/tokens.css" />
+    <link rel="stylesheet" href="src/styles/base.css" />
+    <link rel="stylesheet" href="src/styles/components.css" />
+    <link rel="stylesheet" href="src/styles/pages.css" />
+  </head>
+  <body>
+    <a class="sisdai-skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+    <header id="site-header"></header>
+
+    <main id="contenido-principal" tabindex="-1">
+      <section class="sisdai-hero" aria-labelledby="titulo-home">
+        <div class="sisdai-shell sisdai-hero__content">
+          <p class="sisdai-eyebrow">Sistema institucional</p>
+          <h1 id="titulo-home">Panel territorial y estadístico ENSU</h1>
+          <p>
+            Este portal integra información territorial y tendencias de percepción ciudadana con
+            un diseño accesible, responsivo y consistente con patrones SISDAI.
+          </p>
+          <div class="sisdai-hero__actions">
+            <a class="sisdai-button" href="#mapa-seccion">Explorar mapa</a>
+            <a class="sisdai-button sisdai-button--secondary" href="formulario.html">Ir al formulario</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="mapa-seccion" class="sisdai-shell sisdai-section" aria-labelledby="titulo-mapa">
+        <h2 id="titulo-mapa">Mapa de puntos y coropletas</h2>
+        <p class="sisdai-section__intro">
+          Coropleta de cobertura por región y puntos para sedes de levantamiento.
+        </p>
+        <div class="sisdai-grid sisdai-grid--2col">
+          <article class="sisdai-card" aria-labelledby="mapa-interactivo-titulo">
+            <h3 id="mapa-interactivo-titulo">Visualización geoespacial</h3>
+            <div id="mapa" class="sisdai-map" role="application" aria-label="Mapa interactivo de cobertura y sedes"></div>
+            <p id="mapa-ayuda" class="sisdai-help-text">
+              Usa Tab para navegar controles de zoom y Enter para activar capas.
+            </p>
+          </article>
+          <aside class="sisdai-card sisdai-legend" aria-labelledby="titulo-leyenda">
+            <h3 id="titulo-leyenda">Leyenda</h3>
+            <ul>
+              <li><span class="swatch swatch--high" aria-hidden="true"></span> Cobertura alta (80-100)</li>
+              <li><span class="swatch swatch--mid" aria-hidden="true"></span> Cobertura media (50-79)</li>
+              <li><span class="swatch swatch--low" aria-hidden="true"></span> Cobertura baja (0-49)</li>
+              <li><span class="swatch swatch--point" aria-hidden="true"></span> Sede de levantamiento</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="sisdai-shell sisdai-section" aria-labelledby="titulo-grafica">
+        <h2 id="titulo-grafica">Gráfica de percepción ciudadana</h2>
+        <p class="sisdai-section__intro">Evolución trimestral del indicador de confianza en espacios públicos.</p>
+        <article class="sisdai-card">
+          <canvas id="grafica" aria-label="Gráfica de línea de percepción ciudadana por trimestre" role="img"></canvas>
+        </article>
+      </section>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

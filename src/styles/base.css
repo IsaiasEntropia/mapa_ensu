@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sisdai-font-body);
+  color: var(--sisdai-color-text);
+  background: var(--sisdai-color-bg);
+  line-height: var(--sisdai-line-height);
+}
+
+a {
+  color: var(--sisdai-color-secondary);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--sisdai-color-focus);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-block: 0 0.75em;
+}
+
+p {
+  margin-block: 0 1em;
+}
+
+.sisdai-shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.sisdai-section {
+  padding-block: var(--sisdai-space-8);
+}
+
+.sisdai-section__intro {
+  color: var(--sisdai-color-text-muted);
+  max-width: 68ch;
+}
+
+.sisdai-grid {
+  display: grid;
+  gap: var(--sisdai-space-6);
+}
+
+.sisdai-grid--2col {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.sisdai-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+}
+
+.sisdai-skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
