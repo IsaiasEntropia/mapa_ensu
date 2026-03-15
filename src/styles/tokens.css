@@ -1,0 +1,26 @@
+:root {
+  --sisdai-color-bg: #f8fafc;
+  --sisdai-color-surface: #ffffff;
+  --sisdai-color-primary: #0f766e;
+  --sisdai-color-primary-strong: #115e59;
+  --sisdai-color-secondary: #1d4ed8;
+  --sisdai-color-text: #0f172a;
+  --sisdai-color-text-muted: #334155;
+  --sisdai-color-border: #cbd5e1;
+  --sisdai-color-focus: #f59e0b;
+
+  --sisdai-font-body: "Inter", "Segoe UI", Roboto, system-ui, -apple-system, sans-serif;
+  --sisdai-font-size-base: 1rem;
+  --sisdai-line-height: 1.5;
+
+  --sisdai-space-1: 0.25rem;
+  --sisdai-space-2: 0.5rem;
+  --sisdai-space-3: 0.75rem;
+  --sisdai-space-4: 1rem;
+  --sisdai-space-6: 1.5rem;
+  --sisdai-space-8: 2rem;
+
+  --sisdai-radius-md: 0.5rem;
+  --sisdai-radius-lg: 0.75rem;
+  --sisdai-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+}
